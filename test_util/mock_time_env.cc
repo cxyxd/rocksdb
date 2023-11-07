@@ -1,7 +1,7 @@
 // Copyright (c) 2011-present, Facebook, Inc.  All rights reserved.
 //  This source code is licensed under both the GPLv2 (found in the
 //  COPYING file in the root directory) and Apache 2.0 License
-//  (found in the LICENSE.Apache file in the root directory).
+//  (found in the LICENSE.Apache file in the root     directory).    
 
 #include "test_util/mock_time_env.h"
 
@@ -21,7 +21,7 @@ void MockSystemClock::InstallTimedWaitFixCallback() {
   // that on some platforms, pthread_cond_timedwait does not appear to
   // release the lock for other threads to operate if the deadline time
   // is already passed. (TimedWait calls are currently a bad abstraction
-  // because the deadline parameter is usually computed from Env time,
+  // because the deadline parameter is usually computed from Env time,  
   // but is interpreted in real clock time.)
   SyncPoint::GetInstance()->SetCallBack(
       "InstrumentedCondVar::TimedWaitInternal", [&](void* arg) {
